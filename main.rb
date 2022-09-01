@@ -15,6 +15,10 @@ class Args
     @traditional = false
     @greeting = 'Hello, world!'
 
+    parse_args
+  end
+
+  def parse_args
     OptionParser.new do |opts|
       opts.on('-V', '--version', 'Prints version') do
         puts VERSION
